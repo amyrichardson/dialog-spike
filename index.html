@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <!-- Angular  -->
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-material.min.js"></script>
+    <script src="vendors/angular-material.min.css"></script>
+    <script src="vendors/angular-messages.min.js"></script>
+    <script src="vendors/angular-animate.min.js"></script>
+    <script src="vendors/angular-aria.min.js"></script>
+
+    <!-- App -->
+    <script src="scripts/client.js"></script>
+    <script src="scripts/controllers/dialog.controller.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="DialogController as vm">
+        <md-button class="md-primary md-raised">Open Dialog</md-button>
+    </div>
+</body>
+</html>
