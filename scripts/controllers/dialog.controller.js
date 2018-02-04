@@ -1,4 +1,4 @@
-myApp.controller('DialogController', function($scope, $mdDialog) {
+myApp.controller('DialogController', function() {
 
     console.log('Dialog controller loaded');
     
