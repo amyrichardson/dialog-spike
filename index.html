@@ -16,13 +16,15 @@
     <!-- App -->
     <script src="scripts/client.js"></script>
     <script src="scripts/controllers/dialog.controller.js"></script>
+
 </head>
-<body ng-app="myApp">
-        <md-button class="md-primary md-raised">
-            Alert Dialog
-          </md-button>    
+<body ng-app="myApp" class="md-padding" id="popupContainer" ng-cloak>
+         
     <div ng-controller="DialogController as vm">
-        
+        <md-button class="md-primary md-raised" ng-click="vm.markComplete($event)">
+            Mark Complete
+        </md-button>
+
     </div>
 </body>
 </html>
