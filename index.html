@@ -20,10 +20,50 @@
 </head>
 <body ng-app="myApp" class="md-padding" id="popupContainer" ng-cloak>
          
+
     <div ng-controller="DialogController as vm">
+        <!-- User Navigation -->
+        <md-nav-bar
+        md-no-ink-bar="disableInkBar"
+        md-selected-nav-item="currentNavItem"
+        nav-bar-aria-label="navigation links">
+            <md-nav-item md-nav-click="goto('page1')" name="page1">
+            Progress
+            </md-nav-item>
+            <md-nav-item md-nav-click="goto('page2')" name="page2">
+            Book Lists
+            </md-nav-item>
+            <md-nav-item md-nav-click="goto('page3')" name="page3">
+            Search
+            </md-nav-item>
+        </md-nav-bar>
+
+        <!-- Dialog Examples -->
         <md-button class="md-primary md-raised" ng-click="vm.markComplete($event)">
             Mark Complete
         </md-button>
+        <md-button class="md-primary md-raised md-hue-1" ng-click="vm.markComplete($event)">
+            Hue 1 
+        </md-button>
+        <md-button class="md-primary md-raised md-hue-2" ng-click="vm.markComplete($event)">
+            Hue 2
+        </md-button>  
+        <md-button class="md-accent md-raised" ng-click="showToast()">
+            Show Toast
+        </md-button>
+
+        <!-- Admin Navigation -->
+        <md-nav-bar
+        md-no-ink-bar="disableInkBar"
+        md-selected-nav-item="currentNavItem"
+        nav-bar-aria-label="navigation links">
+            <md-nav-item md-nav-click="goto('page1')" name="page1">
+            Overview
+            </md-nav-item>
+            <md-nav-item md-nav-click="goto('page2')" name="page2">
+            New Book
+            </md-nav-item>
+        </md-nav-bar>
 
     </div>
 </body>

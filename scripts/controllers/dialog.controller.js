@@ -1,4 +1,4 @@
-myApp.controller('DialogController', function($scope, $mdDialog) {
+myApp.controller('DialogController', function($scope, $mdDialog, $mdToast) {
     console.log('Dialog controller loaded');
     let alert = 'You earned a new achievement for finishing your first book that takes place in Asia!'
     let alert2 = 'You earned a new achievement for finishing your first book that takes place in Europe!'
@@ -51,4 +51,16 @@ myApp.controller('DialogController', function($scope, $mdDialog) {
                 .targetEvent(ev)
         );
     } 
+
+
+    $scope.showToast = function() {
+        console.log('TOAST');
+        
+        $mdToast.show(
+          $mdToast.simple()
+            .textContent('Simple Toast!')
+            .position('top right')
+            .hideDelay(3000)
+        );
+      };
 });
