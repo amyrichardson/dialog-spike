@@ -53,12 +53,10 @@ myApp.controller('DialogController', function($scope, $mdDialog, $mdToast) {
     } 
 
 
-    $scope.showToast = function() {
-        console.log('TOAST');
-        
+    $scope.showToast = function() {        
         $mdToast.show(
           $mdToast.simple()
-            .textContent('Simple Toast!')
+            .textContent('New book successfully added.')
             .position('top right')
             .hideDelay(3000)
         );

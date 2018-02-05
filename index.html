@@ -22,11 +22,15 @@
          
 
     <div ng-controller="DialogController as vm">
+        
+        
+        
         <!-- User Navigation -->
         <md-nav-bar
         md-no-ink-bar="disableInkBar"
         md-selected-nav-item="currentNavItem"
         nav-bar-aria-label="navigation links">
+
             <md-nav-item md-nav-click="goto('page1')" name="page1">
             Progress
             </md-nav-item>
@@ -38,19 +42,26 @@
             </md-nav-item>
         </md-nav-bar>
 
-        <!-- Dialog Examples -->
+
+
+
+
+        <!-- Dialog Example -->
         <md-button class="md-primary md-raised" ng-click="vm.markComplete($event)">
             Mark Complete
         </md-button>
-        <md-button class="md-primary md-raised md-hue-1" ng-click="vm.markComplete($event)">
-            Hue 1 
-        </md-button>
-        <md-button class="md-primary md-raised md-hue-2" ng-click="vm.markComplete($event)">
-            Hue 2
-        </md-button>  
+
+
+
+
+         <!-- Toast Example -->
         <md-button class="md-accent md-raised" ng-click="showToast()">
-            Show Toast
+            Add Book
         </md-button>
+
+
+
+
 
         <!-- Admin Navigation -->
         <md-nav-bar
@@ -64,6 +75,205 @@
             New Book
             </md-nav-item>
         </md-nav-bar>
+
+        <!-- User Book Card -->
+        <md-content class="md-padding" layout-xs="column" layout-wrap layout="row" layout-align="center center">
+            <div flex-xs flex-gt-xs="30" layout="column">
+                <md-card>
+                    <md-card-title>                        
+                    <img src="http://books.google.com/books/content?id=MH48bnzN0LUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api">
+                        <md-card-title-text layout-padding>
+                            <span class="md-headline">The Kite Runner</span>
+                            <span class="md-subhead">Author: Khaled Hosseini</span>
+                            <span class="md-subhead">Average Rating: 4</span>
+                            <span class="md-subhead">Country: Afghanistan</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="center">
+                        <md-input-container>
+                            <label>Select a book list</label>
+                            <md-select ng-model="size">
+                                <md-option value="Want to Read">Want to Read</md-option>
+                                <md-option value="Currently Reading">Currently Reading</md-option>
+                                <md-option value="Previously Read">Previously Read</md-option>
+                            </md-select>
+                        </md-input-container>    
+                        <md-button class="md-accent">Add Book</md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+            <div flex-xs flex-gt-xs="30" layout="column">
+                    <md-card>
+                        <md-card-title>                        
+                        <img src="http://books.google.com/books/content?id=MH48bnzN0LUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api">
+                            <md-card-title-text layout-padding>
+                                <span class="md-headline">The Kite Runner</span>
+                                <span class="md-subhead">Author: Khaled Hosseini</span>
+                                <span class="md-subhead">Average Rating: 4</span>
+                                <span class="md-subhead">Country: Afghanistan</span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-actions layout="row" layout-align="center">
+                            <md-input-container>
+                                <label>Select a book list</label>
+                                <md-select ng-model="size">
+                                    <md-option value="Want to Read">Want to Read</md-option>
+                                    <md-option value="Currently Reading">Currently Reading</md-option>
+                                    <md-option value="Previously Read">Previously Read</md-option>
+                                </md-select>
+                            </md-input-container>    
+                            <md-button class="md-accent">Add Book</md-button>
+                        </md-card-actions>
+                    </md-card>
+                </div>
+                <div flex-xs flex-gt-xs="30" layout="column">
+                        <md-card>
+                            <md-card-title>                        
+                            <img src="http://books.google.com/books/content?id=MH48bnzN0LUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api">
+                                <md-card-title-text layout-padding>
+                                    <span class="md-headline">The Kite Runner</span>
+                                    <span class="md-subhead">Author: Khaled Hosseini</span>
+                                    <span class="md-subhead">Average Rating: 4</span>
+                                    <span class="md-subhead">Country: Afghanistan</span>
+                                </md-card-title-text>
+                            </md-card-title>
+                            <md-card-actions layout="row" layout-align="center">
+                                <md-input-container>
+                                    <label>Select a book list</label>
+                                    <md-select ng-model="size">
+                                        <md-option value="Want to Read">Want to Read</md-option>
+                                        <md-option value="Currently Reading">Currently Reading</md-option>
+                                        <md-option value="Previously Read">Previously Read</md-option>
+                                    </md-select>
+                                </md-input-container>    
+                                <md-button class="md-accent">Add Book</md-button>
+                            </md-card-actions>
+                        </md-card>
+                    </div>
+        </md-content>
+
+        <!-- Admin Book Search -->
+        <md-content class="md-padding" layout-xs="column" layout="row" layout-align="center center">
+                    <md-card flex="50" layout="row">
+                        <md-card-title layout="row">                        
+                            <img src="http://books.google.com/books/content?id=MH48bnzN0LUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" height="200">
+                            <md-card-title-text layout-padding>
+                                <span class="md-headline">The Kite Runner</span>
+                                <span class="md-subhead">Author: Khaled Hosseini</span>
+                                <span class="md-subhead">Average Rating: 4</span>
+                            </md-card-title-text>
+                        </md-card-title>
+                            <div layout="column" layout-align="center center">
+                                <md-input-container>
+                                        <label>Select a continent</label>
+                                        <md-select ng-model="continent">
+                                            <md-option value="North America">Asia</md-option>
+                                        </md-select>
+                                </md-input-container>
+                                <md-input-container>
+                                        <label>Select a country</label>
+                                        <md-select ng-model="country">
+                                            <md-option value="North America">Afghanistan</md-option>
+                                        </md-select>
+                                </md-input-container>     
+                                <md-button class="md-accent">Add Book</md-button>
+                            </div>
+                    </md-card>
+            </md-content>
+        
+
+        <!-- Built in Material Progress Indicators -->
+        <md-content layout="row" layout-align="center center">
+            <div flex layout="column">
+                <md-card layout-padding layout-align="center center">
+                    <md-card-title-text>
+                        <span class="md-headline">Total Progress</span>
+                    </md-card-title-text>
+                    <md-progress-circular md-diameter="100" md-mode="determinate" value="25"></md-progress-circular>
+                    <span>25%</span>
+                    <span>25/100 countries wandered</span>
+                </md-card>
+            </div>
+        </md-content>
+        
+
+        <!-- Progress Indicators by Continent -->
+        <md-content class="md-padding" layout-wrap layout-xs="column" layout="row" layout-align="center center">
+                <div flex-xs flex-gt-xs="25" layout="column">
+                    <md-card layout-padding layout-align="center center">
+                        <md-card-title-text>
+                            <span class="md-headline">Asia</span>
+                        </md-card-title-text>
+                        <md-progress-circular md-mode="determinate" md-diameter="100" value="75"></md-progress-circular>
+                        <span>75%</span>
+                        <span>3/4 countries wandered</span>
+                    </md-card>
+                </div>
+                <div flex-xs flex-gt-xs="25" layout="column">
+                    <md-card layout-padding layout-align="center center">
+                        <md-card-title-text>
+                            <span class="md-headline">North America</span>
+                        </md-card-title-text>
+                        <md-progress-circular md-mode="determinate" md-diameter="100" value="35"></md-progress-circular>
+                        <span>35%</span>
+                        <span>3/4 countries wandered</span>
+                    </md-card>
+                </div>
+                <div flex-xs flex-gt-xs="25" flex="wrap" layout="column">
+                    <md-card layout-padding layout-align="center center">
+                        <md-card-title-text>
+                            <span class="md-headline">South America</span>
+                        </md-card-title-text>
+                        <md-progress-circular md-mode="determinate" md-diameter="100" value="35"></md-progress-circular>
+                        <span>35%</span>
+                        <span>3/4 countries wandered</span>
+                    </md-card>
+                </div>
+                <div flex-xs flex-gt-xs="25" layout="column">
+                    <md-card layout-padding layout-align="center center">
+                        <md-card-title-text>
+                            <span class="md-headline">Asia</span>
+                        </md-card-title-text>
+                        <md-progress-circular md-mode="determinate" md-diameter="100" value="89"></md-progress-circular>
+                        <span>89%</span>
+                        <span>3/4 countries wandered</span>
+                    </md-card>
+                </div>
+                <div flex-xs flex-gt-xs="25" layout="column">
+                    <md-card layout-padding layout-align="center center">
+                        <md-card-title-text>
+                            <span class="md-headline">North America</span>
+                        </md-card-title-text>
+                        <md-progress-circular md-mode="determinate" md-diameter="100" value="15"></md-progress-circular>
+                        <span>15%</span>
+                        <span>3/4 countries wandered</span>
+                    </md-card>
+                </div>
+                <div flex-xs flex-gt-xs="25" layout="column">
+                        <md-card layout-padding layout-align="center center">
+                            <md-card-title-text>
+                                <span class="md-headline">Asia</span>
+                            </md-card-title-text>
+                            <md-progress-circular md-mode="determinate" md-diameter="100" value="0"></md-progress-circular>
+                            <span>0%</span>
+                            <span>3/4 countries wandered</span>
+                        </md-card>
+                    </div>
+                    <div flex-xs flex-gt-xs="25" layout="column">
+                        <md-card layout-padding layout-align="center center">
+                            <md-card-title-text>
+                                <span class="md-headline">North America</span>
+                            </md-card-title-text>
+                            <md-progress-circular md-mode="determinate" md-diameter="100" value="5"></md-progress-circular>
+                            <span>5%</span>
+                            <span>3/4 countries wandered</span>
+                        </md-card>
+                    </div>
+        </md-content>
+        
+
+
+
 
     </div>
 </body>
